@@ -1,0 +1,44 @@
+{
+  "author": "Martin Wawrusch <martin@wawrusch.com> (http://martinatsunset.com)",
+  "name": "mongodb-errors",
+  "description": "Helper classes to deal with mongodb errors",
+  "version": "0.2.0",
+  "main" : "lib/index.js",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/codedoctor/node-mongodb-errors.git"
+  },
+  "bin" : {
+  },
+  "directories" : {
+    "lib" : "./lib",
+    "test" : "./test"
+  },
+  "keywords" : [
+    "errors"
+  ],
+  "scripts": {
+    "prepublish" : "coffee -c -o lib src",
+    "watch" : "coffee -c -w  -o lib src",
+    "test": "coffee -c -o lib src;NODE_ENV=test node_modules/.bin/mocha --timeout 10000 -R spec test/*-test.coffee"
+  },
+  "engines": {
+    "node": ">=0.8.0"
+  },
+  "dependencies": {
+    "underscore" : ">=1.4.2"
+  },
+  "devDependencies": {
+    "async": "0.1.22",
+    "coffee-script": "1.4.0",
+    "should": "1.2.1",
+    "mocha": "1.6.0"
+  },
+  "bugs": { "url": "http://github.com/codedoctor/node-mongodb-errors/issues" },
+  "licenses": [
+    { "type": "MIT",
+      "url": "http://github.com/codedoctor/node-mongodb-errors/raw/master/LICENSE"
+    }
+  ]
+  
+}
